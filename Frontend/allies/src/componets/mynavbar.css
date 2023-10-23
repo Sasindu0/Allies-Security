@@ -1,0 +1,20 @@
+.navbar{
+    background-color: #A8FAFF;
+}
+
+.logo{
+    margin-bottom: 12px;
+    padding: 1px;
+    
+    
+}
+
+
+
+.logout{
+    color: rgb(44, 43, 43);
+    background-color:  #A8FAFF;
+     border-color: #A8FAFF;
+     font-weight: 1000;
+ 
+}
