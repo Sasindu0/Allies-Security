@@ -1,40 +1,43 @@
-import React from 'react'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import './mynavbar.css'
+import './mynavbar.css';
 
 const MyNavBar = () => {
     return (
         <div>
-
-            <Navbar className='navbar sticky-top ' expand="lg">
+            <Navbar className="navbar sticky-top" expand="lg">
                 <Container>
-                    <Col>
-                        <div className="container">
-                            <a className="navbar-brand" href="#">
-                                <img className='logo' src=".\img\logo.png" alt="logo" width="100" height="100" ></img>
-                            </a>
+                    <div className="d-flex justify-content-between w-100">
+                        <div>
+                            <NavLink to="/" className="navbar-brand" activeClassName="active">
+                                <img className='logo' src=".\img\logo.png" alt="logo" width="75" height="50" />
+                            </NavLink>
                         </div>
-                    </Col>
-                    <Col>
-                        <Nav className="me-auto">
-                            <Nav.Link href="#home">Home</Nav.Link>
-                            <Nav.Link href="#features">Features</Nav.Link>
-                            <Nav.Link href="#pricing">Pricing</Nav.Link>
-                        </Nav>
-                    </Col>
+                        <div>
+                            <ul className="nav">
+                                <li className="nav-item">
+                                    <NavLink to="/" exact className="nav-link" activeClassName="active">Home</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink to="/services" className="nav-link" activeClassName="active">Services</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink to="/about" className="nav-link" activeClassName="active">About</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink to="/contact" className="nav-link" activeClassName="active">Contact</NavLink>
+                                </li>
+                            </ul>
+                        </div>
 
-                    <Col xs="auto" className="d-flex justify-content-end"> {/* Use d-flex and justify-content-end to move the button to the end */}
-                        <Button className='btn logout'>Log out</Button>
-                    </Col>
+                    </div>
                 </Container>
             </Navbar>
         </div>
-    )
-}
+    );
+};
 
-export default MyNavBar
+export default MyNavBar;
