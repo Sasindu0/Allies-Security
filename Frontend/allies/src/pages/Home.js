@@ -7,6 +7,8 @@ import Footer from '../componets/Footer';
 
 
 
+
+
 const Home = () => {
     return (
 
@@ -18,6 +20,8 @@ const Home = () => {
             <Input />
 
             <Footer />
+
+
         </>
 
 
